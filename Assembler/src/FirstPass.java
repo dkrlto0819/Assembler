@@ -6,7 +6,7 @@ import java.io.*;
 public class FirstPass {
     private void getcode(){
         try{
-            File file = new File("C:\\Users\\J\\Desktop\\JSstudy\\Homework\\Assembler\\inputCode.txt");
+            File file = new File("/Users/ddang/Assembler/Assembler/inputCode.txt");
             FileReader filereader = new FileReader(file);
             BufferedReader bufReader=new BufferedReader(filereader);
             String line="";
@@ -25,11 +25,13 @@ public class FirstPass {
         }catch (IOException e){
             System.out.println(e);
         }
+
     }
 
     public void FirstPassing(){
         getcode();
         int LC=0;
+
         while(CodeAndTable.code[LC].equals("END")==false){
             String line=CodeAndTable.code[LC];
             if(line.contains(",")){
